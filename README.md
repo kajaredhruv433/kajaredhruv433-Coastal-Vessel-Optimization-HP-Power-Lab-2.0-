@@ -1,4 +1,4 @@
-# 🚢 HPCL Coastal Vessel Optimization
+# Coastal Vessel Optimization
 
 ### Maritime Logistics Optimization using Integer Linear Programming & Streamlit
 
@@ -8,7 +8,7 @@ The solution combines **Integer Linear Programming (PuLP)** with an interactive 
 
 ---
 
-# 🚀 Overview
+## Overview
 
 Efficient coastal shipping is critical for minimizing operational costs in bulk cargo transportation.
 
@@ -24,84 +24,56 @@ The optimization engine automatically computes the best transportation plan whil
 
 ---
 
-# ✨ Features
+## Features
 
-- 🚢 Integer Linear Programming based optimization
-- 📊 Interactive Streamlit dashboard
-- ⚓ Tanker allocation optimization
-- 📦 Cargo demand fulfillment
-- 📍 Single-port loading constraint
-- 🔄 Two-port discharge optimization
-- 💰 Transportation cost minimization
-- 📅 Monthly working-day constraints
-- 📈 Editable tanker, demand, and trip datasets
-- 📋 Optimal voyage schedule generation
+- Integer Linear Programming-based optimization
+- Interactive Streamlit dashboard
+- Tanker allocation optimization
+- Cargo demand fulfillment
+- Single-port loading constraint
+- Two-port discharge optimization
+- Transportation cost minimization
+- Monthly working-day constraints
+- Editable tanker, demand, and trip datasets
+- Optimal voyage schedule generation
 
 ---
 
-# System Architecture
+## System Architecture
 
-```
-
+```text
 Input Data
-
 │
-
 ├── Tankers
-
 ├── Capacities
-
 ├── Hire Rates
-
 ├── Port Demands
-
 ├── Loading → Unloading Trip Times
-
 └── Unloading → Unloading Trip Times
-
 │
-
 ▼
-
 Data Preparation
-
 │
-
 ▼
-
 Integer Linear Programming
-
 (PuLP Solver)
-
 │
-
 ├── Decision Variables
-
 ├── Objective Function
-
 ├── Demand Constraints
-
 ├── Capacity Constraints
-
 └── Working-Day Constraints
-
 │
-
 ▼
-
 Optimal Tanker Schedule
-
 │
-
 ▼
-
 Streamlit Dashboard
-
 ```
 
 ---
 
-# Optimization Model
+## Optimization Model
 
 The optimization engine creates integer decision variables representing the number of trips performed by each tanker.
 
@@ -116,62 +88,48 @@ the model determines whether the trip should be included in the optimal transpor
 
 ---
 
-# Objective Function
+## Objective Function
 
 The objective is to minimize the total transportation cost.
 
 For every voyage:
 
-```
-Trip Cost
-
-=
-
-Hire Rate × Voyage Time
+```text
+Trip Cost = Hire Rate × Voyage Time
 ```
 
 The optimization minimizes the total cost across the entire fleet.
 
 ---
 
-# Constraints
+## Constraints
 
-The optimization model enforces:
-
-### 🚢 Single Loading Port
+### Single Loading Port
 
 Each voyage loads cargo from only one loading port.
 
----
-
-### 📦 Maximum Two Discharge Ports
+### Maximum Two Discharge Ports
 
 Each trip may unload cargo at:
 
 - One unloading port
-- OR two unloading ports
+- Two unloading ports
 
----
-
-### 📊 Demand Satisfaction
+### Demand Satisfaction
 
 Demand for every unloading port must be fully satisfied.
 
----
-
-### ⏳ Monthly Working Limit
+### Monthly Working Limit
 
 Each tanker operates within a configurable maximum number of working days.
 
----
-
-### 🚚 Capacity Constraint
+### Capacity Constraint
 
 Cargo transported on each trip cannot exceed the assigned tanker's carrying capacity.
 
 ---
 
-# Streamlit Dashboard
+## Streamlit Dashboard
 
 The project includes an interactive web interface that allows users to:
 
@@ -185,7 +143,7 @@ The project includes an interactive web interface that allows users to:
 
 ---
 
-# Technologies Used
+## Technologies Used
 
 | Category | Technology |
 |----------|------------|
@@ -198,41 +156,26 @@ The project includes an interactive web interface that allows users to:
 
 ---
 
-# Project Structure
+## Project Structure
 
-```
-
+```text
 HPCL-Coastal-Vessel-Optimization/
-
 │
-
-├── app.py                 # Streamlit application
-
-├── HP.py                  # Optimization engine
-
+├── app.py
+├── HP.py
 ├── Backup/
-
 │   ├── version1/
-
 │   ├── version2/
-
 │   ├── version3/
-
 │   ├── version4/
-
 │   ├── version5/
-
 │   └── version6/
-
-│
-
 └── README.md
-
 ```
 
 ---
 
-# Installation
+## Installation
 
 ```bash
 git clone https://github.com/kajaredhruv433/kajaredhruv433-Coastal-Vessel-Optimization-HP-Power-Lab-2.0-.git
@@ -244,9 +187,9 @@ pip install -r requirements.txt
 
 ---
 
-# Requirements
+## Requirements
 
-```
+```text
 streamlit
 pandas
 numpy
@@ -255,9 +198,7 @@ pulp
 
 ---
 
-# Running the Application
-
-Launch the Streamlit interface:
+## Running the Application
 
 ```bash
 streamlit run app.py
@@ -265,9 +206,9 @@ streamlit run app.py
 
 ---
 
-# Optimization Workflow
+## Optimization Workflow
 
-```
+```text
 Fleet Information
         │
         ▼
@@ -291,7 +232,7 @@ Transportation Cost Analysis
 
 ---
 
-# Output
+## Output
 
 The optimization engine generates:
 
@@ -306,25 +247,19 @@ The optimization engine generates:
 
 ---
 
-# Applications
+## Applications
 
-🚢 Coastal Shipping Optimization
-
-⚓ Fleet Scheduling
-
-📦 Bulk Cargo Logistics
-
-🏭 Supply Chain Planning
-
-📈 Transportation Cost Optimization
-
-🧮 Operations Research
-
-📊 Decision Support Systems
+- Coastal Shipping Optimization
+- Fleet Scheduling
+- Bulk Cargo Logistics
+- Supply Chain Planning
+- Transportation Cost Optimization
+- Operations Research
+- Decision Support Systems
 
 ---
 
-# Future Improvements
+## Future Improvements
 
 - Multi-objective optimization
 - Fuel consumption optimization
@@ -337,7 +272,7 @@ The optimization engine generates:
 
 ---
 
-# Key Learnings
+## Key Learnings
 
 - Integer Linear Programming
 - Operations Research
@@ -351,10 +286,10 @@ The optimization engine generates:
 
 ---
 
-# Acknowledgements
+## Acknowledgements
 
 Developed as part of **HP Power Lab 2.0**, this project demonstrates the application of Integer Linear Programming and optimization techniques to solve real-world maritime logistics challenges involving coastal tanker scheduling and transportation cost minimization.
 
 ---
 
-## ⭐ If you found this project useful, consider giving it a star!
+⭐ **If you found this project useful, consider giving it a star!**
